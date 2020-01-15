@@ -18,7 +18,7 @@
       <tr>
         <td><%= feed.name %></td>
         <td><%= feed.comment %></td>
-        <td><%= feed.image %></td>
+        <td><%= image_tag "#{feed.image}", :size =>'300x200' %></td>
         <td><%= feed.date %></td>
         <td><%= link_to 'Show', feed %></td>
         <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
