@@ -1,0 +1,18 @@
+ja:
+  activerecord:
+    models:
+      feed: 絵
+      user: ユーザー
+    attributes:
+      feed:
+        name: 名前
+        content: 内容
+        image: 画像
+        date: 日付
+      user:
+        user_name: ユーザー名
+        email: メールアドレス
+        current_password: 現在のパスワード
+        password: パスワード
+        password_confirmation: 確認用パスワード
+        remember_me: ログインを記憶
