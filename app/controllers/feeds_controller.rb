@@ -1,6 +1,6 @@
 class FeedsController < ApplicationController
   before_action :set_feed, only: [:show, :edit, :update, :destroy]
-
+  before_action :logged_in_user
   # GET /feeds
   # GET /feeds.json
   def index
@@ -78,4 +78,10 @@ class FeedsController < ApplicationController
     def feed_params
       params.require(:feed).permit(:name, :comment, :image, :date)
     end
+
+    def logged_in_user
+      unless logged_in?
+      redirect_to new_session_path, notice:'ログインを行なってください'
+    end
+  end
 end
