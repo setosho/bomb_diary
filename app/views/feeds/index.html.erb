@@ -2,13 +2,16 @@
 
 <h1>投稿一覧</h1>
 
+<%= link_to "投稿の昇順で並べ替え", feeds_path(sort_dated: "true") %>
+<%= link_to "投稿の降順で並べ替え", feeds_path(sort_dated2: "true") %>
+
 <table>
   <thead>
     <tr>
       <th>タイトル</th>
       <th>コメント</th>
       <th>画像</th>
-      <th>期間</th>
+      <th>日付</th>
       <th>投稿者</th>
       <th colspan="3"></th>
     </tr>
@@ -22,9 +25,9 @@
         <td><%= image_tag "#{feed.image}", :size =>'300x200' %></td>
         <td><%= feed.date %></td>
         <td><%= feed.user.user_name %>の投稿<td>
-        <td><%= link_to 'Show', feed %></td>
-        <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
-        <td><%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細', feed %></td>
+        <td><%= link_to '編集', edit_feed_path(feed) %></td>
+        <td><%= link_to '削除', feed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +35,4 @@
 
 <br>
 
-<%= link_to 'New Feed', new_feed_path %>
+<%= link_to '投稿する', new_feed_path %>

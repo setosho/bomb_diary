@@ -4,7 +4,13 @@ class FeedsController < ApplicationController
   # GET /feeds
   # GET /feeds.json
   def index
-    @feeds = Feed.all.order(id: "DESC")
+    if params[:sort_dated]
+      @feeds = Feed.all.order(id: "ASC")
+    elsif params[:sort_dated2]
+      @feeds = Feed.all.order(id: "DESC")
+    else
+      @feeds = Feed.all.order(id: "DESC")
+    end
   end
 
   # GET /feeds/1
