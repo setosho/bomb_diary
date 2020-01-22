@@ -65,5 +65,3 @@ gem 'carrierwave'
 gem 'mini_magick'
 #パスワードのハッシュ化に必要
 gem 'bcrypt', '3.1.11'
-#検索フォーム作成のGem
-gem 'ransack'
