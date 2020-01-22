@@ -8,6 +8,9 @@ class FeedsController < ApplicationController
       @feeds = Feed.all.order(id: "ASC")
     elsif params[:sort_dated2]
       @feeds = Feed.all.order(id: "DESC")
+    elsif
+      @search = Feed.ransack(params[:q])
+      @feeds = @search.result
     else
       @feeds = Feed.all.order(id: "DESC")
     end
