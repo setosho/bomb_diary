@@ -16,3 +16,5 @@ ja:
         password: パスワード
         password_confirmation: 確認用パスワード
         remember_me: ログインを記憶
+        profile: 一言コメント
+        image: 自画像
