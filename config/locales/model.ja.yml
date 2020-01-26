@@ -6,7 +6,7 @@ ja:
     attributes:
       feed:
         name: 名前
-        content: 内容
+        comment: コメント
         image: 画像
         date: 日付
       user:

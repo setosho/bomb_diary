@@ -1,22 +1,22 @@
 <p>
-  <strong>Name:</strong>
+  <strong>名前:</strong>
   <%= @feed.name %>
 </p>
 
 <p>
-  <strong>Comment:</strong>
+  <strong>コメント:</strong>
   <%= @feed.comment %>
 </p>
 
 <p>
-  <strong>Image:</strong>
+  <strong>画像:</strong>
   <%= image_tag @feed.image.url, :size =>'300x200' %>
 </p>
 
 <p>
-  <strong>Date:</strong>
+  <strong>日付:</strong>
   <%= simple_time(@feed[:date]) %>
 </p>
 
-<%= link_to 'Edit', edit_feed_path(@feed) %> |
-<%= link_to 'Back', feeds_path %>
+<%= link_to '投稿を編集する', edit_feed_path(@feed) %> |
+<%= link_to '投稿一覧へ', feeds_path %>
