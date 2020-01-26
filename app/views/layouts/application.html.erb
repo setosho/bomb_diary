@@ -19,6 +19,12 @@
       <%= link_to "ログイン", new_session_path %>
     <% end %>
 
+    <% flash.each do |key, value| %>
+      <div class="space">
+        <%= content_tag(:div, value, class: "#{key}") %>
+      </div>
+    <% end %>
+
     <%= yield %>
 
   </body>

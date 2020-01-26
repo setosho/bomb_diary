@@ -24,3 +24,7 @@ html {background-image: url("背景A"); }
 .textone p {
   text-align: center;
 }
+
+.space {
+  padding-top: 30px;
+}
