@@ -6,4 +6,8 @@ module SessionsHelper
   def logged_in?
     current_user.present?
   end
+
+  def simple_time(time)
+    time.strftime("%Y-%m-%d　%H:%M　")
+  end 
 end

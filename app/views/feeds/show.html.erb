@@ -15,7 +15,7 @@
 
 <p>
   <strong>Date:</strong>
-  <%= @feed.date.strftime("%Y-%m-%d%H:%M") %>
+  <%= simple_time(@feed[:date]) %>
 </p>
 
 <%= link_to 'Edit', edit_feed_path(@feed) %> |
