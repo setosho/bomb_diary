@@ -11,9 +11,11 @@
 <br>
 <br>
 <% if @user.id == current_user.id %>
-  <%= link_to "ユーザー情報を編集する", edit_user_path(@user) %>
-  <%= link_to "ユーザー情報を削除する", @user, method: :delete, data: {confirm: '本当に削除しますか?'} %>
-  <%= link_to '画像を投稿する', new_feed_path %>
+  <p><%= link_to "ユーザー情報を編集する", edit_user_path(@user) %></p>
+  <p><%= link_to "ユーザー情報を削除する", @user, method: :delete, data: {confirm: '本当に削除しますか?'} %></p>
+  <br>
+  <br>
+  <p><%= link_to '画像を投稿する', new_feed_path %></p>
 <% else %>
   <%= link_to '投稿一覧へ', feeds_path %>
 <% end %>
