@@ -1,6 +1,7 @@
 class FeedsController < ApplicationController
   before_action :set_feed, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_user
+  before_action :authenticate_user, only: [:edit, :update, :destroy]
   # GET /feeds
   # GET /feeds.json
   def index
@@ -82,6 +83,13 @@ class FeedsController < ApplicationController
     def logged_in_user
       unless logged_in?
       redirect_to new_session_path, notice:'ログインを行なってください'
+    end
+
+    def authenticate_user
+      if @current_user == params[:id].to_i
+        flash[:notice] = "あなたの投稿では無いので操作できません"
+        redirect_to feeds_path
+      end
     end
   end
 end

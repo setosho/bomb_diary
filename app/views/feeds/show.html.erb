@@ -18,5 +18,11 @@
   <%= simple_time(@feed[:date]) %>
 </p>
 
-<%= link_to '投稿を編集する', edit_feed_path(@feed) %> |
-<%= link_to '投稿一覧へ', feeds_path %>
+<%if @feed.user_id == current_user.id %>
+  <%= link_to '画像を編集', edit_feed_path(@feed) %> |
+  <%= link_to '画像を削除', @feed, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+
+<p>
+  <%= link_to '投稿一覧へ', feeds_path %>
+</p>
