@@ -10,7 +10,10 @@
 <br>
 <br>
 <br>
-<h4>ログインはこちらから</h4>
+
+<div class="loginform">
+  
+  <h4>ログインはこちらから</h4>
 
 <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
 
@@ -22,3 +25,4 @@
 
   <%= f.submit "ログイン" %>
 <% end %>
+</div>

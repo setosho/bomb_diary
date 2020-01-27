@@ -4,13 +4,13 @@
 </p>
 
 <p>
-  <strong>コメント:</strong>
-  <%= @feed.comment %>
+  <strong>画像:</strong>
+  <%= image_tag @feed.image.url, :size =>'300x200' %>
 </p>
 
 <p>
-  <strong>画像:</strong>
-  <%= image_tag @feed.image.url, :size =>'300x200' %>
+  <strong>コメント:</strong>
+  <%= @feed.comment %>
 </p>
 
 <p>

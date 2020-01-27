@@ -13,20 +13,34 @@
   <%= f.label :user_name %>
   <%= f.text_field :user_name %>
 
+<br><br>
+
   <%= f.label :email %>
   <%= f.email_field :email %>
+
+<br><br>
 
   <%= f.label :password %>
   <%= f.password_field :password %>
 
+<br><br>
+
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %>
+<br><br>
 
-  <%= f.label :profile %>
-  <%= f.text_field :profile %>
+<div class="shortline">
+  <p>---------------  以下の設定は任意で行ってください  --------------- </p>
+</div>
+<br>
 
   <%= f.label :image %>
   <%= f.file_field :image %>
+<br><br>
+
+  <%= f.label :profile %>
+  <%= f.text_field :profile %>
+<br><br><br><br>
 
   <%= f.submit "送信する" %>
 <% end %>

@@ -1,6 +1,5 @@
 html {background-image: url("背景A"); }
 
-
 .topimage {
   position: relative;
 }
@@ -27,4 +26,20 @@ html {background-image: url("背景A"); }
 
 .space {
   padding-top: 30px;
+}
+
+.field{
+  padding-bottom: 25px;
+}
+
+.space2 {
+  padding-top: 5%;
+}
+
+.deteil {
+  padding-right: 10%;
+}
+
+.loginform{
+  text-align: center;
 }
