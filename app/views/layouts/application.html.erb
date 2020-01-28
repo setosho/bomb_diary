@@ -14,6 +14,7 @@
     <% if logged_in? %>
       <%= link_to "プロフィール", user_path(current_user.id) %>
       <%= link_to "ログアウト", session_path(current_user.id), method: :delete %>
+      <%= link_to '投稿一覧へ', feeds_path %>
     <% else %>
       <%= link_to "アカウント作成", new_user_path %>
       <%= link_to "ログイン", new_session_path %>

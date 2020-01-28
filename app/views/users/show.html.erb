@@ -5,9 +5,38 @@
 </div>
 
 <p>一言: <%= @user.profile %></p>
-<br>
-<br>
-<br>
+<br><br><br><br>
+
+
+<div class="shortline">
+  <p>---------------お気に入り一覧---------------</p>
+</div>
+
+<table>
+  <div class="space2">
+  <thead>
+    <tr>
+      <th>タイトル</th>
+      <th>画像</th>
+      <th>コメント</th>
+      <th>投稿者</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+  </div>
+  <tbody>
+    <% @favorites.each do |favorite| %>
+      <tr>
+        <td><%= favorite.name %></td>
+        <td><%= image_tag "#{favorite.image}", :size =>'300x200' %></td>
+        <td><%= favorite.comment %></td>
+        <td><%= favorite.user.user_name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br><br><br><br><br>
+
 <% if @user.id == current_user.id %>
   <p><%= link_to "ユーザー情報を編集する", edit_user_path(@user) %></p>
   <p><%= link_to "ユーザー情報を削除する", @user, method: :delete, data: {confirm: '本当に削除しますか?'} %></p>
