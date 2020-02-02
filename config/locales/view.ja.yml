@@ -1,0 +1,7 @@
+ja:
+  views:
+    pagination:
+      first: 最初へ
+      next: 次へ
+      last: 最後へ
+      previous: 1つ前へ

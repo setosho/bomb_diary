@@ -65,3 +65,5 @@ gem 'carrierwave'
 gem 'mini_magick'
 #パスワードのハッシュ化に必要
 gem 'bcrypt', '3.1.11'
+#ページネーションを追加するGem
+gem 'kaminari', '~> 0.17.0'

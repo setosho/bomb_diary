@@ -12,6 +12,7 @@ class FeedsController < ApplicationController
     else
       @feeds = Feed.all.order(id: "DESC")
     end
+    @feeds = @feeds.page(params[:page]).per(7)
   end
 
   # GET /feeds/1
